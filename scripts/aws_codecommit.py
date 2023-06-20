@@ -2,8 +2,8 @@ import boto3
 import subprocess
 
 # Set your AWS credentials
-aws_access_key_id = 'YOUR_ACCESS_KEY_ID'
-aws_secret_access_key = 'YOUR_SECRET_ACCESS_KEY'
+aws_access_key_id = 'AKIASFODRRQY7C3WB77F'
+aws_secret_access_key = '11+mbhk1qgKv7OZ6aJrVgQ/A7qesQyXM+MD1BQ0S'
 
 # Set the repository name and file path
 repository_name = 'Data-Engineering-Project'

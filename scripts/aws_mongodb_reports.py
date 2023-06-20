@@ -1,7 +1,7 @@
 import pymongo
 
 # Set your MongoDB connection string
-connection_string = 'YOUR_MONGODB_CONNECTION_STRING'
+connection_string = 'mongodb://admin123:admin123@docdb-2023-06-20-13-26-04.cluster-cy7ttu6ib1ip.us-east-1.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=us-east-1-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false'
 
 # Create a MongoDB client
 client = pymongo.MongoClient(connection_string)

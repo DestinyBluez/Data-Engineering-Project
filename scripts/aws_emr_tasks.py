@@ -1,27 +1,25 @@
 import boto3
 
 # Create an EMR client
-emr_client = boto3.client('emr', region_name='us-west-2')  # Replace 'us-west-2' with your desired region
+emr_client = boto3.client('emr', region_name='us-west-2')  
 
 # Configure the EMR cluster
 emr_cluster = emr_client.run_job_flow(
     Name='DataEngineeringCluster',
-    ReleaseLabel='emr-6.3.0',  # Replace with the desired EMR version
+    ReleaseLabel='emr-6.3.0',  
     Instances={
         'InstanceGroups': [
             {
                 'Name': 'Master node',
                 'Market': 'ON_DEMAND',
                 'InstanceRole': 'MASTER',
-                'InstanceType': 'm5.xlarge',  # Replace with your desired instance type
-                'InstanceCount': 1
+                'InstanceType': 'm5.xlarge',  
             },
             {
                 'Name': 'Core nodes',
                 'Market': 'ON_DEMAND',
                 'InstanceRole': 'CORE',
-                'InstanceType': 'm5.xlarge',  # Replace with your desired instance type
-                'InstanceCount': 2
+                'InstanceType': 'm5.xlarge',  
             }
         ],
         'KeepJobFlowAliveWhenNoSteps': False,

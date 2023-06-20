@@ -1,11 +1,11 @@
 import boto3
 
 # Set your AWS credentials
-aws_access_key_id = 'YOUR_ACCESS_KEY_ID'
-aws_secret_access_key = 'YOUR_SECRET_ACCESS_KEY'
+aws_access_key_id = 'AKIASFODRRQY7C3WB77F'
+aws_secret_access_key = '11+mbhk1qgKv7OZ6aJrVgQ/A7qesQyXM+MD1BQ0S'
 
 # Set the S3 bucket and file path
-bucket_name = 'your-bucket'
+bucket_name = 'data-engg-project-bucket'
 file_path = 'data/MarketingDataset.csv'
 
 # Create an S3 client
