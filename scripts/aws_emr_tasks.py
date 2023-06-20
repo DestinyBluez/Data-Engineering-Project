@@ -49,7 +49,7 @@ from pyspark.sql.functions import *
 spark = SparkSession.builder.appName('DataEngineeringTasks').getOrCreate()
 
 # Load the dataset
-df = spark.read.csv('s3://your-bucket/your-dataset.csv', header=True, inferSchema=True)
+df = spark.read.csv('s3://data-engg-project-bucket/MarketingDataset.csv', header=True, inferSchema=True)
 
 # Task 1: Removing column values with unknown or null values and replacing with 0
 df = df.fillna(0)
@@ -63,7 +63,7 @@ for char in special_chars:
     df = df.withColumn('col_name', regexp_replace(col('col_name'), char, ''))
 
 # Save the modified dataset
-df.write.mode('overwrite').csv('s3://your-bucket/processed-dataset.csv', header=True)
+df.write.mode('overwrite').csv('s3://data-engg-project-bucket/processed-dataset.csv', header=True)
 
 # Stop the Spark session
 spark.stop()
